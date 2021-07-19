@@ -11,13 +11,12 @@ def cars(first_car, second_car):
 
 cars("BMW", "Merc")
 
-#function with a condition
+#function with a loop
 
-def cars():
-    if i:
-        print("German machine")
-    else:
-        print("Jap jalopies")
+def cars(model):
+    for x in model:
+        print(x)
 
+german = ["BMW","Merc","Opel Astra","VW"]
 
-cars("BMW","Merc")
+cars(german)
