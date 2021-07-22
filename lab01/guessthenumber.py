@@ -1,50 +1,50 @@
 import random
 number = random.randint(1, 10)
 
-player_name = input("Hello, What's your name?")
+guess_party = input("Hi, kindly state your name?")
 number_of_guesses = 0
-print('Okay! '+ player_name+ ' I need you to Guess a number between 1 and 10:')
+print('Hey! '+ guess_party + ' Kindly engage for a few. Guess a number between 1 and 10:')
 print()
 
 def game():
     number = random.randint(1, 10)
-    print("You have 5 chances to guess that number, Alright, Lets roll!")
+    print("You don't have forever. Just 5 chances to guess the number. Have the Go!!")
     i = 1
     r = 1
-    while i<6:  
-        user_number = int(input('Enter your number: ')) 
-        if user_number < number:
+    while i<5:  
+        guess_digit = int(input('Enter your number: ')) 
+        if guess_digit < number:
             print("Your guess is too low")
             print()
-            print("You now have " + str(5-i)+ " chances left" )
+            print("You are at " + str(5-i)+ " chances to go" )
             i = i+1
-        elif user_number > number:
+        elif guess_digit > number:
             print("Your guess is too high")
             print()
-            print("You now have " + str(5-i)+ " chances left" )
+            print("You are at " + str(5-i)+ " chances to go" )
             i = i+1
-        elif user_number == number:
-            print("\nYou have guessed the correct number!")
-            print("Nailed it!")
+        elif guess_digit == number:
+            print("\n You gave the right guess, Yay!!. BINGO!!")
+            
             r = 0;
             break
         else:
-            print("This is an invalid number. Please try again")
-            print("You now have " + str(5-i)+ " chances left" )
+            print("This number is invalid. You need to give it another try")
+            print("You are at " + str(5-i)+ " chances to go" )
             continue
     if r==1:
-        print("Ooooh, Sorry you lost the game!!")
+        print("Ooooh!!! Sooo bad you lost the game!!")
         print()
-        print("My number was = " + str(number))
-        print("Better luck next time!")
+        print("I was holding = " + str(number))
+        print("Put in your best foot next time!!")
 
 def main():
     game()
     while True:
-        another_game = input("Do you wish to play again?(y/n): ")
-        if another_game == "y":
+        another_game = input("Do you wish to play again?(Y/N): ")
+        if another_game == "Y":
             game()
         else:
             break
 main()
-print("\nEnd of the Game! Thank you for playing!")
+print("\n This is THE END! You did great.Thanks!")
